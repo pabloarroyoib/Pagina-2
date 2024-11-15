@@ -1,0 +1,265 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Gradient background */
+.gradient-bg {
+    background: linear-gradient(135deg, #ff0000, #333);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 50, 0.8)); /* Degradado oscuro con azul */
+}
+
+/* Header styles */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Update the gradient background for the home section */
+#home {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Alinear en columna */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    min-height: 100vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+}
+
+/* Add a subtle red glow effect */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+#home h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#home p {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.logo-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espaciado entre la imagen y el texto */
+    border-radius: 10%;
+}
+
+.logo-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10%;
+    background: inherit;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+/* About section */
+#about {
+    background-color: white;
+    color: #333;
+}
+
+/* Classes section */
+#classes {
+    background-color: #f8f8f8;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.class-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Membership section */
+#membership {
+    background-color: white;
+}
+
+.membership-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.membership-option {
+    background-color: #ff0000;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* Gallery section */
+#gallery {
+    background-color: #f8f8f8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contact section */
+#contact {
+    background-color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.trainers-gallery {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    flex-direction: row; /* Alinear en fila para vista de computadora */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+}
+
+.trainer-item {
+    margin: 10px; /* Espaciado entre las imágenes */
+}
+
+.trainer-image {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    max-width: 300px; /* Limita el ancho máximo */
+    border-radius: 10%; /* Opcional: redondear bordes */
+}
+
+.athletes-gallery {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    flex-direction: row; /* Alinear en fila para vista de computadora */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+}
+
+.athlete-item {
+    margin: 10px; /* Espaciado entre las imágenes */
+}
+
+.athlete-image {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    max-width: 300px; /* Limita el ancho máximo */
+    border-radius: 10%; /* Opcional: redondear bordes */
+}
+
+/* Media Query para vista móvil */
+@media (max-width: 768px) {
+    .athletes-gallery {
+        flex-direction: column; /* Cambiar a columna en vista móvil */
+    }
+}
+
+.social-icon img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 5px; /* Espaciado entre los íconos */
+}
+
+/* Media Query para ajustar el tamaño del texto en pantallas más pequeñas */
+@media (max-width: 768px) {
+    p {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente en dispositivos móviles */
+    }
+}
